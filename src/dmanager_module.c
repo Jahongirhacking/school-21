@@ -4,13 +4,10 @@
 
 #include "door_struct.h"
 
-#define DOORS_COUNT 15
-#define MAX_ID_SEED 10000
-
 void initialize_doors(struct door* doors);
 void sort_doors(struct door* doors);
 void close_doors(struct door* doors);
-void print_doors(struct door* doors);
+void print_doors(const struct door* doors);
 
 int main() {
     struct door doors[DOORS_COUNT];
@@ -46,7 +43,7 @@ void close_doors(struct door* doors) {
     }
 }
 
-void print_doors(struct door* doors) {
+void print_doors(const struct door* doors) {
     for (int i = 0; i < DOORS_COUNT; i++) {
         printf(i != DOORS_COUNT - 1 ? "%d, %d\n" : "%d, %d", doors[i].id, doors[i].status);
     }
