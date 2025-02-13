@@ -1,361 +1,248 @@
-# T10D16
-
+# T11D17
 
 You can find some useful video materials in the "Projects (Media)" section on the Platform.
 
-![This_day_will_help_you_get_acquainted_with_characters_and_strings_C](misc/eng/images/day10_door.png)
+![This day will help you get acquainted with structures and unions in C.](misc/eng/images/day11_door.png)
 
 
 ## Contents
 
 1. [Chapter I](#chapter-i) \
- 1.1. [Level 3. Room 2.](#level-3-room-2)
+ 1.1. [Level 3. Room 3.](#level-3-room-3)
 2. [Chapter II](#chapter-ii) \
-    2.1. [List 1.](#list-1) \
-    2.2. [List 2.](#list-2) 
+ 2.1. [List 1. MCO.](#list-1-mco) \
+ 2.2. [List 2. Instructions.](#list-2-instructions)
 3. [Chapter III](#chapter-iii) \
- 3.1. [Quest 1. Strlen.](#quest-1-strlen) \
- 3.2. [Quest 2. Strcmp.](#quest-2-strcmp) \
- 3.3. [Quest 3. Strcpy.](#quest-3-strcpy) \
- 3.4. [Quest 4. Strcat.](#quest-4-strcat) \
- 3.5. [Quest 5. Strchr.](#quest-5-strchr) \
- 3.6. [Quest 6. Strstr.](#quest-6-strstr) \
- 3.7. [Quest 7. Strtok.](#quest-7-strtok) \
- 3.8. [Quest 8*. Width.](#bonus-quest-8-width) 
-4. [Chapter IV](#chapter-iv) 
+ 3.1. [Quest 1. The Doors.](#quest-1-the-doors) \
+ 3.3. [Quest 2. Linked List.](#quest-2-linked-list) \
+ 3.4. [Quest 3. Stack for key.](#quest-3-stack-for-key) 
+4. [Chapter IV](#chapter-iv)
 
 
 # Chapter I
 
-## Level 3. Room 2.
+## Level 3. Room 3.
 
 ***LOADING Level 3… \
-LOADING Room 2…***
+LOADING Room 3…***
 
-You find yourself in a room with wonderful furniture and a lot of bookshelves. Wherever you look, there are books. There are books by the door. Even the computer is standing on a stack of books.
+\> *Look around*
 
-![day10_book](misc/eng/images/day10_book.png)
+Another room with a desk, a computer, a lamp, and no books. Only this time, instead of just one door, it has fifteen. They all have some strange electronic locks with keypads. That's disturbing. Well at least there's a lamp here – it makes the room cozier.
 
-\> *Sit down at the computer, start the module and press Enter*
+\> *Pull the first door*
 
-You see the following lines on the screen:
+It's locked.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+\> *Pull the second door*
 
-    Emergency message: standard string.h library calls are unavailable. 
-    The linguistics module cannot work.
+Locked again.
 
-\> *find -O3 -L / -name "string.h"*
-
-You wait for n hours and realize that this library simply **does not exist** on the computer.
-
-\> *Pull the door handle*
+\> *Pull the third door*
 
 It doesn't open.
 
-\> *Great, looks like now I'll have to recover this library!*
+\> *Pull the fourth door*
 
-You look at all the books in the room. You notice that the names of the books on the covers are arranged in alphabetic order.\
-They look like old computer books and printed-out manuals. \
-Something tells you to search for a book related to the string.h library
+Nope.
 
-\> *Search...*
+\> *For i = 5, while i <= 15 -> Pull the i door and increase the i*
 
-Failure.
+Wasted CPU time.
 
-\> *Search...*
+\> *Look around again*
 
-Failure.
+Next to a pile of papers on the desk, someone left a clipping. Did the AI somehow manage to do it or was it someone before you? Although it's rather questionable to assume that the AI would read newspapers, let alone make clippings.
 
-\> *Search...*
-
-Success. You find a book called "The String.h - Linux manual. Complete edition."
-
-\> *Open the book*
-
-It looks a lot like a man printout. Even the font is the same as in the terminal. 
+\> *Skim read the clipping*
 
 ***LOADING...***
 
 
 # Chapter II
 
-## List 1.
+## List 1. MCO.
 
-\> *Read the book*
+The piece of paper is yellowed and worn out. It was also cut out extremely sloppily. 
 
-    PROLOG
-       This manual page is part of the POSIX Programmer's Manual.  The Linux
-       implementation of this interface may differ (consult the
-       corresponding Linux manual page for details of Linux behavior), or
-       the interface may not be implemented on Linux.
-    NAME 
-       string.h — string operations
-    SYNOPSIS
-       #include <string.h>
-    DESCRIPTION
-       Some of the functionality described on this reference page extends
-       the ISO C standard. Applications shall define the appropriate feature
-       test macro (see the System Interfaces volume of POSIX.1‐2008, Section
-       2.2, The Compilation Environment) to enable the visibility of these
-       symbols in this header.
+>Mars Climate Orbiter was launched on December 11, 1998, aboard a Delta II launch vehicle. The vehicle reached Mars in 9 months. On September 23, 1999, Mars Climate Orbiter was supposed to perform a braking burn and get into a highly elliptical orbit with a 14-hour period, and then, over the course of two months, use a range of aerodynamic maneuvers in the upper part of the Martian atmosphere to loop around Mars. At the estimated time, at an altitude of 193 km, the vehicle fired the engines for braking. Five minutes later, Mars Climate Orbiter began the orbital insertion maneuver and never sent any other signals. Data analysis suggests that the orbiter passed over the surface of Mars at an altitude of 57 km instead of the planned 110 km and was destroyed in the atmosphere. Such a significant discrepancy was caused by an error in the mission software: the unit of force used by the engine thrust commands in the Mars Climate Orbiter software was the newton, while the software on Earth that generated those commands used the British pound-force...
 
-       The <string.h> header shall define NULL and size_t as described in
-       <stddef.h>.
-
-       The <string.h> header shall define the locale_t type as described in
-       <locale.h>.
-
-       The following shall be declared as functions and may also be defined
-       as macros. Function prototypes shall be provided for use with ISO C
-       standard compilers.
-
-            Chapter 1 - size_t   strlen(const char *);
-            Chapter 2 - int      strcmp(const char *, const char *);
-            Chapter 3 - char    *strcpy(char *restrict, const char *restrict);
-            Chapter 4 - char    *strcat(char *restrict, const char *restrict);
-            Chapter 5 - char    *strchr(const char *, int);
-            Chapter 6 - char    *strstr(const char *, const char *);
-            Chapter 7 - size_t   strnlen(const char *, size_t);
-            Chapter 8 - int      strncmp(const char *, const char *, size_t);
-          
-            ...
-
-       Inclusion of the <string.h> header may also make visible all symbols
-       from <stddef.h>.
-
-You wonder how many functions this library has... Perhaps you should go the iterative route and try to restart the program module after adding each function. Maybe it doesn't need all the functions.. 
-Otherwise, you can get stuck here for a long time.
-
-\> *Come up to the computer again*
-
-You come up to the computer and notice another open book next to it. Somehow you missed it the first time. The book is open on the "Module Testing: Part 2" chapter
-
-\> *Skim read*
+\> *Take the first sheet from the stack of paper under the clipping*
 
 ***LOADING...***
 
 
-## List 2.
+## List 2. Instructions.
 
->Module testing (unit testing) is a process in computer programming that helps check the correctness of specific modules of source code, 
->sets of one or more software modules, together with the associated control data, and procedures for use and processing.
->The idea is to create tests for every non-trivial function or method. This allows you to quickly check if the new 
->changes in the code have caused a regression, i.e. errors in parts of the program that have already been tested, and facilitates the detection and elimination of such errors.
->The purpose of module testing is to isolate parts of the program and show that they can work individually, minimizing the number of states of the system.
+This looks like a page from a computer programming book... You should probably read it carefully.
+
+>Structure is a type defined by the user, which allows you to store and move several values of different types together. A structure is defined as follows:
+
+    struct [structure name] {
+    element definition;
+    element definition;
+    …
+    element definition;
+    } [one or several variables];
+
+>The use of structures makes it possible to combine shared data, and also leaves the possibility for further modification of the transmitted data without changing function headers.
+>
+>The amount of memory occupied by the structure equals the total memory occupied by all of its elements. Therefore structures in C are zero-cost abstractions. Structure elements are arranged in memory in the order in which they are defined.
+
+\> *Take another sheet of paper*
+
+>Union is a data type that makes it possible to reuse memory for storing values ​​of different types. A union is defined as follows:
+
+    union [union name] {
+    element definition;
+    element definition;
+    …
+    element definition;
+    } [one or several variables];
+
+>The memory occupied by a union is defined as the memory required to store the biggest element of the union.
+>.....................
+
+The rest of the text is illegible
+
+>One of the applications of unions and structures are so-called unions with a label. These structures store one of several valid data types and contain a label–an integer that can be used to determine which data type is currently in the union.
+
+\> *Take another sheet of paper*
+
+>Singly linked list is a data structure that consists of interlinked nodes with the same type of data. Each element of the list has a pointer to the next element, and the last one stores a null pointer (0/NULL in C). The lists have variable length and make it possible to easily unite multiple lists, but take up more memory and require more elementary operations for their bypass, compared to arrays.
 
 ***LOADING...***
 
 
 # Chapter III
 
-## Quest 1. Strlen.
+## Quest 1. The Doors. 
 
-Perhaps you should also create tests for every new function to make sure they work absolutely correctly. Who knows how broken code can affect the linguistics module that is already not working. And you still need to get out of this room. Plus, if something goes wrong, it will be easier to find the error with the tests. 
+\> *Look around the room carefully in search for extra clues*
 
-For each added function in src/s21_string.h, add a test developed based on the idea of unit testing to the src/s21_string_test.c file, with the name of the function and the _test postfix which checks the function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. 
+Nothing.
 
-> DON'T FORGET! All your programs are tested for the style norm and memory leaks. Start-up instructions
-> the list of tests is also in the `materials` folder
+\> *Examine the desk carefully in search for extra clues*
 
-***== Quest 1 received. Create src/s21_string.h and src/s21_string.c files and add declaration and definition of the s21_strlen function to them. Create a test program, src/s21_string_test.c, that should include the s21_strlen_test function for checking the s21_strlen function with a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strlen function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strlen_tests. The executable file should be stored at the root in the build folder. It should be named Quest_1. ==***
+You notice a small orange piece of paper under the keyboard. Such pieces of paper are often used as stickers for reminders. 
 
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
+\> *Take and read*
 
-***LOADING...***
+Are you sure? This may be personal...
 
+![day11_sticker](misc/eng/images/day11_sticker.png)
 
-## Quest 2. Strcmp.
+\> *I am. It didn't bother anyone before. Plus I don't have much choice.*
 
-\> *The first function is ready.*
+>src/dmanager_module.c – door control module. \
+>Do not touch the door initialization function, it destroys the logic of the core of the room. \
+>Do not open all the doors, it crushes the transmission protocol. \
+>For management, dedicate the function of door sorting in ascending order and closing "open" doors. 
+> 
+>Door structure: integer id and numeric status (0 – closed, 1 – open).
 
-\> *Restarting the module*
+Looks like a reminder that someone left long before you. And this reminder may help you. You should pay attention to this door control module.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111111111111111111111111111111111111111111111111111111111111111111111111111111111
+***== Quest 1 received. Create door structure in src/door_struct.h. 
+The structure itself consists of an integer door id and an integer status 
+(0 – closed, 1 – open). Correct the src/dmanager_module.c program so it 
+sorts the initialized array of doors in ascending order by ids using any algorithm 
+and displays it in the following format: "door id, door status". 
+In addition to that, set the status "closed" for all doors. Changing the 
+door initialization function is not allowed. Stick to the structured approach. 
+The program should be built using a Makefile. Stage name: door_struct. The 
+executable file should be located in the build folder at the root of the 
+repository. It should be named Quest_1. The solution will be checked for memory 
+leaks and for the style norm, instructions as usual-in `materials` ==***
 
-    Emergency message: standard string.h library calls are unavailable. The linguistics module cannot work.
-
-Let's continue..
-
-***== Quest 2 received.  Add declaration and definition of the s21_strcmp function to src/s21_string.h and src/s21_string.c files. Add the s21_strcmp_test function to the src/s21_string_test.c file for checking the s21_strcmp function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strcmp function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strcmp_tests. The executable file should be stored at the root in the build folder. It should be named Quest_2. ==***
-
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
-
-***LOADING...***
-
-
-## Quest 3. Strcpy.
-
-\> *The second one is ready.*
-
-\> *Restart*
-
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    1111111111111111111111111111111111111111111111111111111111111111
-    
-    Emergency message: standard string.h library calls are unavailable. The linguistics module cannot work.
-
-***== Quest 3 received.  Add declaration and definition of the s21_strcpy function to src/s21_string.h and src/s21_string.c files. Add the s21_strcpy_test function to the src/s21_string_test.c file for checking the s21_strcpy function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strcpy function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strcpy_tests. The executable file should be stored at the root in the build folder. It should be named Quest_3. ==***
-
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
-
-***LOADING...***
-
-
-## Quest 4. Strcat.
-
-\> *Checking module*
-
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111111111111111111111111111111111111
-    
-    Emergency message: standard string.h library calls are unavailable. The linguistics module cannot work.
-
-***== Quest 4 received. Add declaration and definition of the s21_strcat function to src/s21_string.h and src/s21_string.c files. Add the s21_strcat_test function to the src/s21_string_test.c file for checking the s21_strcat function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strcat function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strcat_tests. The executable file should be stored at the root in the build folder. It should be named Quest_4. ==***
-
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
+0, 0<br/>
+1, 0<br/>
+2, 0<br/>
+3, 0<br/>
+4, 0<br/>
+5, 0<br/>
+6, 0<br/>
+7, 0<br/>
+8, 0<br/>
+9, 0<br/>
+10, 0<br/>
+11, 0<br/>
+12, 0<br/>
+13, 0<br/>
+14, 0<br/>
 
 ***LOADING...***
 
 
-## Quest 5. Strchr.
+## Quest 2. Linked List.
 
-\> *Yet another boring module check*
+Looks like door initialization works. But how can you get out? Which door should you assign the "open" status to? Based on the notes, if you do it for all doors – it may cause some kind of disaster.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111
+\> *Flip the piece of paper over*
 
-    Emergency message: standard string.h library calls are unavailable. The linguistics module cannot work.
+Here's the rest of the note.
 
-***== Quest 5 received. Add declaration and definition of the s21_strchr function to src/s21_string.h and src/s21_string.c files. Add the s21_strchr_test function to the src/s21_string_test.c file for checking the s21_strchr function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strchr function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strchr_tests. The executable file should be stored at the root in the build folder. It should be named Quest_5. ==***
+>The necessary door changes every day. \
+>The number of the current door is calculated via a polynomial function by the indoor modules of the room. Module source code is not available. \
+>By reverse engineering, it was revealed that this module does not know how to work with arrays. In its work, the module used a dynamically linked library with the implementation of a singly linked list. This library is critical for the operation of the module, however, the binary file with the library was damaged.
 
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
+There was something about a singly linked list on one of the sheets. You should find out more about this list and memory allocation for it as well. 
 
-***LOADING...***
-
-
-## Quest 6. Strstr.
-
-\> *Checking...*
-
-    1111111111111111111111111111111111111111111111111111111111111111111111111111
-    
-    Emergency message: standard string.h library calls are unavailable. The linguistics module cannot work.
-    
-How many calls does this module use?
-    
-***== Quest 6 received. Add declaration and definition of the s21_strstr function to src/s21_string.h and src/s21_string.c files. Add the s21_strstr_test function to the src/s21_string_test.c file for checking the s21_strstr function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strstr function, only use language features. Using string.h and other libraries is not allowed. Build the program using the Makefile. Name of the build stage: strstr_tests. The executable file should be stored at the root in the build folder. It should be named Quest_6. ==***
-
-> It is allowed to use only the following standard libraries: stdlib. h, stdio. h
+***== Quest 2 received. Develop an src/list.c program which contains implementations of functions for working
+with a singly linked list of doors (`struct node* init(struct door* door)` - initialization of the singly linked list structure based on the passed `struct door`, `struct node* add_door(struct node* elem, struct door* door)` - inserting a new `struct door` element into a singly linked list after the passed `elem` node, `struct node* find_door(int door_id, struct node* root)` - search for a door in the list by its id, `struct node* remove_door(struct node* elem, struct node* root)` - deleting a list element, `void destroy(struct node* root)` - freeing the memory occupied by the list structure). Move the declarations of these functions and the structure of the singly linked list to the file src/list.h. Write module tests for checking 
+the add_door and remove_door functions of the singly linked list in src/list_test.c. Method functions 
+should return SUCCESS if the test is successful and FAIL if there is an error. 
+The tests should be built using a Makefile. Stage name: list_test. 
+The executable file should be located in the build folder at the root of 
+the repository. It should be named Quest_2.
+Please note: this quest will be tested by the `cppcheck` utility.==***
 
 ***LOADING...***
 
 
-## Quest 7. Strtok.
+## Quest 3. Stack for key. 
 
-\> *Again*
+Okay, the necessary library for the current door number search module has been written. You see on the screen a rapidly filling scale of the activity of the algorithm's calculations. After a couple of seconds, the number of the door you need appears on the screen. With relief and a sense of accomplishment, you head for the door.
 
-    11111111111111111111111111111111
-    111111111
-    111
-    
-    Loading...
-    Uploading...
-    Paging...
-    Done.
-    
-    Module data has been loaded successfully, the module is ready for launch.
+\> *Pull the handle*
 
-Finally!
+It's locked... \
+However, you notice a small screen open on the door. The message says in big letters:
 
-\> *Confirm module launch*
+> NO DYNAMIC INT STACK AND/OR STACK OPERATIONS
 
-    Launching reference module...
-    OK!
-    
-    Reference module at your service, how can I help you?
+You go back to the computer and think about what it could possibly mean. It's a shame there are no more pieces of paper with clues anywhere... \
+You give it some thought and remember that a stack seems to be a variety of dynamic data structures, which is often implemented as a list. Looks like in order to open the door you also need to create a dynamic stack that contains integers. You need to implement the stack's standard interface: data pushing and popping operations. Also, don't forget to save all implementations in src/stack.c, whereas function declarations and structures in src/stack.h. You should also write module tests in tests/stack_test.c to make sure the stack and its functions are working. Who knows what might happen if the stack doesn't work correctly..
 
-\> *Type in "I need to move further"*
+***== Quest 3 received. Develop an src/stack.c program which contains 
+implementations of functions for working with a dynamic stack (init, push, 
+pop, destroy). Put declarations of functions and structures of the dynamic 
+stack that stores integers in src/stack.h. Write module tests for checking 
+the push and pop functions of the stack in src/stack_test.c. Method functions 
+should return SUCCESS if the test is successful and FAIL if there is an error. 
+The tests should be built using a Makefile. Stage name: stack_test. 
+The executable file should be located in the build folder at the root of 
+the repository. It should be named Quest_3.
+Please note: this quest will be tested by the `cppcheck` utility. ==***
 
-    Question breakdown – failure
-    
-    Emergency message: extended string.h library calls are unavailable – the strtok function is not found.
-    
-Oh, for god's sake. Looks like I have to add this function to the library as well.
-
-***== Quest 7 received. Add declaration and definition of the s21_strtok function to src/s21_string.h and src/s21_string.c files. Add the s21_strtok_test function to the src/s21_string_test.c file for checking the s21_strtok function using a set of test data (minimum 3): normal values, abnormal values, boundary values, etc. For each test, the input, output, and test result (SUCCESS/FAIL) must be output to stdout. Add the launch of this function to main. When developing the s21_strtok function, only use language features. Using string.h and other libraries is not allowed. Build the program using the makefile. Name of the build stage: strtok_tests. The executable file should be stored at the root in the build folder. It should be named Quest_7. ==***
-
-> It is allowed to use only the following standard libraries: <stdlib. h>, <stdio. h>
-
-***LOADING...***
-
-
-## Bonus Quest 8*. Width.
-
-\> *Restarting the module*
-
-    Launching reference module...
-    OK!
-    
-    Reference module at your service, how can I help you?
-    
-\> *Type in "I need to move further"*
-
-    Moving further – identified
-    Searching for information in the database... ... ...
-    
-    Information on the key for room 3–2:
-    To unlock the door in the room 3–2, you need to make a contribution to the word processor
-    under development. Scanning available tickets......
-    ..............................................................
-    ..............................................................
-    ..............................................................
-    Ticket found. Create an src/text_processor.c program with full word processor functionality. 
-    Sources of inspiration: MS Word, LibreOffice, OpenOffice.
-
-\> *Type in "Ok. This is too much."*
-
-    Analyzing the answer.... Answer analyzed.
-    Answer characteristics: sarcasm, pain, discouragement, distrust, fear, rejection.
-    Searching for a compromise....
-    Compromise #1: implement part of the task instead of the whole task.
-    Create an src/text_processor.c program that runs in one mode only 
-    with the -w switch (formatting–justified), taking a number and text of up to 100 characters via stdin.
-    As a result, it should create and output justified text. 
-    The width of a text line in characters is determined by the first number. 
-    After updating the room's remote repository, the door will be unlocked.
-    Compromise #2: leave.
-
-***== Quest 8 received. Create an src/text_processor.c program that takes a number (line width) and text of up to 100 characters, ending with a line break, as input to stdin, when launched with the -w command-line switch. For any other switches, the program should output "n/a". When launched with the -w switch, the program justifies the input text and outputs it to stdout, mimicking the behavior of a word processor. The text should be divided into several lines, each having a specified number of characters. Lines cannot start with a space and cannot end with a space, the last line must not end with a line break. A word can be split to jump to a new line through the symbol '-' only if it does not fit on one line entirely. In all other cases, it must remain intact. The words in a line must be distributed evenly, filling the gaps between them with spaces. Using string.h is not allowed.  Name of the build stage: text_processor. The executable file should be stored at the root in the build folder. It should be named Quest_8. ==***
-
-| Terminal arguments | Input | Output |
-| ------ | ------ | ------ |
-| -w | 10<br/>hello how are you | hello how<br/>are you |
-| -w | 5<br/>ab abcd ab abcd ab abcdefgh | ab<br/>abcd<br/>ab<br/>abcd<br/>ab a-<br/>bcde-<br/>fgh |
-
-> It is allowed to use only the following standard libraries: <stdlib. h>, <stdio. h>
+> ***This task does not provide for autotesting!***
 
 ***LOADING...***
 
 
 # Chapter IV
 
-\> *Type in "So I can leave now?"*
+\> *Push the last task in the repository*
 
-    All exit conditions: fulfilled.
-    One more left.
-    Let's talk.
+Looks like it's all done.
 
-\> *Type in "Maybe next time...?"*
+\> *Come up to the necessary door*
 
-    Your answer was predicted by the predictive algorithm with 91% accuracy.
-    Thank you for this insightful discussion and for helping validate predictive linguistic analytics.
-    Take care.
-    Opening the door....
+The small screen is empty. Looks like your stack has worked for the door.
 
-You hear a click and the door is wide open, as if it has a spring. It's time to go! 
+\> *Pull the handle*
+
+The door opens and you take a step into the next room.
 
 ***LOADING...***
 

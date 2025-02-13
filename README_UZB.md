@@ -1,358 +1,229 @@
-# T10D16
+# T11D17
 
 
-Foydali video materiallarni Platformadagi “Projects (Media)” bo‘limida topishingiz mumkin.![]
+Foydali video materiallarni Platformadagi “Projects (Media)” bo‘limida topishingiz mumkin.
 
-![This_day_will_help_you_get_acquainted_with_characters_and_strings_C](misc/rus/images/day10_door.png)
+![This day will help you get acquainted with structures and unions in C.](misc/rus/images/day11_door.png)
 
 
 ## Contents
 
 1. [Chapter I](#chapter-i) \
- 1.1. [Level 3. Room 2.](#level-3-room-2)
+ 1.1. [Level 3. Room 3.](#level-3-room-3)
 2. [Chapter II](#chapter-ii) \
-    2.1. [List 1.](#list-1) \
-    2.2. [List 2.](#list-2) 
+ 2.1. [List 1. MCO.](#list-1-mco) \
+ 2.2. [List 2. Instructions.](#list-2-instructions)
 3. [Chapter III](#chapter-iii) \
- 3.1. [Quest 1. Strlen.](#quest-1-strlen) \
- 3.2. [Quest 2. Strcmp.](#quest-2-strcmp) \
- 3.3. [Quest 3. Strcpy.](#quest-3-strcpy) \
- 3.4. [Quest 4. Strcat.](#quest-4-strcat) \
- 3.5. [Quest 5. Strchr.](#quest-5-strchr) \
- 3.6. [Quest 6. Strstr.](#quest-6-strstr) \
- 3.7. [Quest 7. Strtok.](#quest-7-strtok) \
- 3.8. [Quest 8*. Width.](#bonus-quest-8-width) 
-4. [Chapter IV](#chapter-iv) 
+ 3.1. [Quest 1. The Doors.](#quest-1-the-doors) \
+ 3.3. [Quest 2. Linked List.](#quest-2-linked-list) \
+ 3.4. [Quest 3. Stack for key.](#quest-3-stack-for-key) 
+4. [Chapter IV](#chapter-iv)
 
 
 # Chapter I
 
-## Level 3. Room 2.
+## Level 3. Room 3.
 
 ***LOADING Level 3… \
-LOADING Room 2…***
+LOADING Room 3…***
 
-Juda ko‘p kitoblar bor bo‘lgan yaxshi jihozlangan xonaga tushib qolding. Qayerga qarama, hamma joyda kitoblar bor. Eshik yonida kitoblar turibdi. Hatto kompyuter ham kitoblar ustida turibdi.
+\> *Atrofga qarash*
 
-![day10_book](misc/rus/images/day10_book.png)
+Yana bir xona, kompyuter, lampa, lekin kitoblar yo‘q. Bu safar bitta eshik o‘rniga o‘n beshta eshik bor. Har birida klaviaturasi bor bo‘lgan g‘alati elektron qulf osilgan. Juda shubhali. Yaxshiyam lampa bor - u bilan doimo qulayroq.
 
-\> *Kompyuter oldiga o‘tirish, modulni ishga tushirish va Enter bosish
+\> *Birinchi eshikni ochish*
 
-Ekranda quyidagi satrlarni ko‘rding:
+Yopiq.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+\> *Ikkinchi eshikni ochish*
 
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas.
-    Lingvistik moduli ishdan chiqdi.
+Yopiq.
 
-\> *find -O3 -L / -name "string.h"*
+\> *Uchinchi eshikni ochish*
 
-n soat vaqt kutgach, kompyuterda bu kutubxona yo‘qligini tushunding.
+Ochilmayapti.
 
-\> *Eshik tutqichini tortish*
+\> *To‘rtinchi eshikni ochish*
 
-Bo’lmayapti.
+Yo‘q.
 
-\> *Zo‘r, bu kutubxonani ham tiklashga to‘g‘ri keladi, shekelli*
+\> *i uchun = 5, hozircha i <= 15 -> i eshigini ochish va i ko‘paytirish*
 
-Xonada ko’p kitoblarni ko’rding. Kitoblar nomlari bir parcha qog’ozda alifbo tartibida yozilgan. \
-Bu eski kompyuter adabiyoti va manual choplamasi shekelli. \
-Ichingdagi ovoz string.h kutubxonasi bilan bog’liq bo’lgan kitobni izlashni aytyapti.
+Protsessor vaqti behuda ketdi...
 
-\> *Izlash...*
+\> *Yana atrofga qarash*
 
-Bo’lmadi.
+Bir to‘plam qog‘ozlar yonida kimdir qoldirib ketgan gazeta parchasiga ko‘zing tushdi. Bu SI bo‘lganmi yoki sendan oldin kelgan boshqasimi? SI gazeta o‘qishi amrimahol, gazeta parchalari haqida esa gapirmasa ham bo‘ladi.
 
-\> *Izlash...*
-
-Bo’lmadi..
-
-\> *Izlash...*
-
-Bo’ldi. «The String.h - Linux manual. Complete edition» nomli kitobni topding.
-
-\> *Kitobni ochish*
-
-man-a nusxasiga o’hshaydi. Hatto shrift terminaldagiday.
+\> *Parchani o‘qish*
 
 ***LOADING...***
 
 
 # Chapter II
 
-## List 1.
+## List 1. MCO.
 
-\> *Kitobni o’qish*
+Qog‘oz ancha eski.  Bundan tashqari, u palapartish qirqilgan.
 
-    PROLOG
-       This manual page is part of the POSIX Programmer's Manual. The Linux
-       implementation of this interface may differ (consult the
-       corresponding Linux manual page for details of Linux behavior), or
-       the interface may not be implemented on Linux.
-    NAME 
-       string.h — string operations
-    SYNOPSIS
-       #include <string.h>
-    DESCRIPTION
-       Some of the functionality described on this reference page extends
-       the ISO C standard. Applications shall define the appropriate feature
-       test macro (see the System Interfaces volume of POSIX.1‐2008, Section
-       2.2, The Compilation Environment) to enable the visibility of these
-       symbols in this header.
+>1998 yili 11 dekabrda PH Delta-2 da Mars Climate Orbiter ishga tushirildi. Apparat Marsga 9 oydan keyin keldi. Mars Climate Orbiter 1999 yili 23 sentyabrda tormoz impulsini chiqarishi  va yuqori elliptik orbitaga 14 soat oralig‘i bilan o‘tishi kerak edi. Keyin ikki oy davomida Marsning ustki atmosferasida aerodinamik harakatlar yordamida orbitani dumaloqgacha yetkazishi kerak edi. 193 km balandlikda hisoblangan vaqtda apparat dvigatellarni to‘xtatishga yoqdi. 5 daqiqadan keyin MCO reja bo‘yicha Marsning orqasiga ketdi va undan boshqa hech qanday signallar kelmadi. Maʼlumotlar tahlilidan shu aniqlandiki, apparat hisoblangan 110 km o’rniga 57 km balandlikda Mars yuzasidan o‘tdi va atmosferada parchalandi. Shunchalik katta farq missiyaning dasturiy taʼminotdagi xato dastidan yuz berdi: Mars Climate Orbiter dasturiy taʼminotidagi dvigatel tortishish bo‘yicha buyruqlar nyuton kuch o‘lchov birligini ishlatishgan, bu buyruklarni yaratgan Yerdagi dasturiy taʼminot esa britan o‘lchov birligini ishlatgan (funt-kuch)...
 
-       The <string.h> header shall define NULL and size_t as described in
-       <stddef.h>.
-
-       The <string.h> header shall define the locale_t type as described in
-       <locale.h>.
-
-       The following shall be declared as functions and may also be defined
-       as macros. Function prototypes shall be provided for use with ISO C
-       standard compilers.
-
-            Chapter 1 - size_t   strlen(const char *);
-            Chapter 2 - int      strcmp(const char *, const char *);
-            Chapter 3 - char    *strcpy(char *restrict, const char *restrict);
-            Chapter 4 - char    *strcat(char *restrict, const char *restrict);
-            Chapter 5 - char    *strchr(const char *, int);
-            Chapter 6 - char    *strstr(const char *, const char *);
-            Chapter 7 - size_t   strnlen(const char *, size_t);
-            Chapter 8 - int      strncmp(const char *, const char *, size_t);
-          
-            ...
-
-       Inclusion of the <string.h> header may also make visible all symbols
-       from <stddef.h>.
-
-Bu kutubxonada ko‘p funksiyalar bor ekan... Balki, interaktiv yol bilan borish kerakdir va har bir yangi qo’shilgan funksiyadan keyin dasturli modulni qayta yuklashga harakat qilish kerakdir. Ehtimol, unga hamma funksiyalar kerak emasdir..
-Aks holda, ancha o’tirib qolish mumkin.
-
-\> *Kompyutyer yoniga yana borish*
-
-Kompyuter yoniga kelib, uning oldida yana bitta ochiq kitobni ko‘rding, birinchi safar borganda u negadir ko‘rinmagan. Kitob «Modul testdan o‘tkazish. 2 chi qism» bobida ochiq.
-
-\> *Ko‘z yugurtirish*
+\> *Gazeta parchasi tagidagi ko‘pgina qog‘ozlardan birinchisini olish*
 
 ***LOADING...***
 
 
-## List 2.
+## List 2. Instructions.
 
->Modulli sinov - (ingl. unit testing) dasturlash jarayoni, dasturning manba kodining alohida modullari, bitta yoki ko‘proq dastur modullari bilan mos boshqaruv maʼlumotli to‘plamlari, qo‘llash  va ishlov berish jarayonlari to‘g‘ri ekanini tekshirishga imkon beradi.
->G’oya har bir murakkab funksiya yoki usul uchun test yozishdan iborat. Bu yana o‘zgartirilgan kod regressiyaga olib kelmaganini tezda aniqlashga imkon beradi, yani dasturning saralangan qismlarda xato kelib chiqmaganini, hamda bunday xatolarni aniqlashga va to‘g‘rilashni osonlashtiradi.
->Modulli sinovning maqsadi - dasturning  alohida qismlarini bartaraf qilish va tizim holatining raqamini kamaytirib, ular alohida bo’lganda ishga yaroqli ekanini ko‘rsatish.
+Qog‘oz dasturlash bo‘yicha bitta kitobdan yirtib olinganga o‘xshaydi... Menimcha, diqqat bilan o‘qish arziydi.
+
+>Struktura - muayyan foydalanuvchi turi, bir necha turli qiymatni birga saqlashga va joyini almashtirishga imkon beradi. Strukturalar quyidagicha qayd etiladi:
+
+    struct [Struktura nomi] {
+    element qiymati;
+    element qiymati;
+    …
+    element qiymati;
+    } [bitta yoki bir necha o‘zgaruvchi];
+
+>Strukturalarni ishlatish maʼlumotlarni birlashtirishga imkon beradi, shuningdek, o‘tkaziladigan maʼlumotlarni funksiyalar sarlavhasi o‘zgarmagan holda keyinchalik o‘zgartirish mumkin.
+
+>
+>Struktura egallagan xotira hajmi barcha elementlari egallagan xotira miqdoriga teng. Shunday ekan, С tilidagi Strukturalar nol qiymatiga ega bo‘lgan abstraksiyalardir. Struktura elementlari xotirada qayd etilgan tartibda joylashgan.
+
+\> *Keyingi varaqni olish*
+
+>Birlashtirish - maʼlumotlar turi, u har xil turdagi qiymatlarni saqlash  xotirasini qayta ishlashga imkon beradi:
+
+    union [birlashtirish nomi] {
+    element qiymati;
+    element qiymati;
+    …
+    element qiymati;
+    } [bitta yoki bir necha o‘zgaruvchi];
+
+>Birlashtirish egallagan xotira eng katta ittifoq elementini saqlash uchun kerak bo‘lgan xotira sifatida qayt etilgan.
+>.....................
+
+Matnni o‘qish imkonsiz.
+
+>Birlashtirish va strukturalarning bitta qo’llanilishi, masalan, belgili birlashtirishlar deb hisoblanadi. Bu strukturalar mumkin bo‘lgan bir nechta maʼlumotlar turlaridan bittasini, va butun raqamli belgini o‘z ichida saqlaydi. Unga qarab, hozirgi paytda birlashtirishda aynan qaysi maʼlumotlar turi borligini aniqlash mumkin.
+
+\> *Keyingi varaqni olish* 
+
+>Bir bog‘lanishli ro‘yxat - maʼlumotlar strukturasi, bir turdagi maʼlumotlarni o’z ichiga olgan ketma-ket bog‘liq bog‘lamalardan iborat. Ro‘yxatning har bir elementi keyingi element ko‘rsatgichiga ega, oxirgisi u yerda bo‘sh ko‘rsatkichni saqlaydi (C da 0/NULL). Ro‘yxatlar o‘zgaruvchan uzunlikka ega bo’lib, ko‘p ro‘yxatlarni osonlikcha birlashtirishga imkon beradi, lekin ko‘p xotirani egallaydi va massivlarga qaraganda, ular bo’yicha o’tish uchun ko‘proq oddiy operetsiyalarni talab qiladi.
 
 ***LOADING...***
 
 
 # Chapter III
 
-## Quest 1. Strlen.
+## Quest 1. The Doors. 
 
-Ehtimol, har bir yangi funksiya uchun qo‘shimcha testlar yozish kerakdir. Shunda ular butunlayin to‘g‘ri ishlayotganini ko‘rsa bo‘ladi. Kim bilsin buzilgan kod ishlamayotgan lingvistik modulga qanday taʼsir qilishi mumkin. Sen esa bu xonadan chiqishing kerak.  Bundan tashqari, nimadir bo’lsa, testlar bilan xatoni izlash osonroq bo‘ladi.
+\> *Qo‘shimcha yordam beruvchi maʼlumotni izlash uchun xonani diqqat bilan kuzatish*
 
-src/s21_string.h ga qo‘shilgan har bir funksiyaga src/s21_string_test.c fayliga test qo‘shilsin, u modulli sinov g‘oyasiga mos ishlangan, funksiya  va postfiks nomi _test bilan, u (3 dan) test maʼlumotlari yozilganda funksiyani tekshiradi: normal qiymatlar, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqarilsin.
+Bo’sh.
 
-UNUTMANG! Sizning barcha dasturlaringiz kod uslub normasi va xotira sarfi uchun tekshiriladi. Testlarni o'tkazish bo'yicha ko'rsatma ham `materials` papkasida joylashgan. 
+\> *Qo‘shimcha yordam beruvchi maʼlumotni izlash uchun stolga diqqat bilan qarash*
 
-***== Quest 1 qabul qilindi. src/s21_string.h va src/s21_string.c fayllari tuzish, ularga e’lon va s21_strlen funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *sinov dasturini tuzish, (3 dan) test maʼlumotlarini yozganda s21_strlen funksiyasini tekshirish uchun s21_strlen_test funksiyasini qo‘shish: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strlen funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida tuzilsin. Bosqich nomi - strlen_tests. Bajarilgan fayl ildizda build papkasida Quest_1 nomi bilan saqlansin. ==***
+Klaviatura tagida to‘q sariq kichkina qog‘ozni ko‘rding. U biron narsani eslatish uchun stiker sifatida ishlatiladi.
 
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
+\> *Olib o’q’ish*
 
-***LOADING...***
+Aminmisan? Bu shahsiy bo’lishi mumkin...
 
+![day11_sticker](misc/rus/images/day11_sticker.png)
 
-## Quest 2. Strcmp.
+\> *Ha. Oldinlari bu hech kimni qiziqtirmas edi. Boshqa tanlovim yo’q.*
 
-\> *Birinchi funksiya tayyor.*
+>src/dmanager_module.c - eshikni boshqarish moduli. \
+>Eshikni initsializatsiyalash funksiyasi tegilmasin, xona o‘zagining mantiqi buzilyapti. \
+>Hamma eshiklar ochilmasin, buning dastidan uzatish protokoli parchalanadi. \
+>Boshqarish uchun o’sish tartibda eshiklarni ajratish  va “ochiq” eshiklarni yopish funksiyasi belgilansin.
+> 
+>Eshik strukturasi: butunsonli id va sonli status (0 - yopiq, 1 - ochiq).
 
-\> *Modulni qayta ishga tushirish*
+Sendan ancha avval kimdir tashlab ketgan eslatmaga o‘xshaydi. Eshikni boshqarish moduliga eʼtibor berish arziydi, bu yordam berishi mumkin.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111111111111111111111111111111111111111111111111111111111111111111111111111111111
+***== Quest 1 qabul qilindi. src/door_struct.h* *da eshiklar strukturasi yaratish. Strukturaning o‘zi butunsonli eshik  id va butunsonli status dan iborat (0 - yopiq, 1 - ochiq).  src/dmanager_module.c dasturini to‘g‘irilash, u qiymatlangan eshiklar massivini eshiklar id  har qanday algoritm bilan o’sish tartibda ajratsin va shu formatda chiqarsin: «eshik id, eshik statusi». Bundan tashqari, barcha eshiklar uchun «yopiq» statusi qayd etilsin. Eshiklarni initsializatsiyalash funksiyasi o‘zgartirilmasin. Struktur yondashuv qo‘llansin. Dartur Makefile yordamida tuzilsin. Bosqich nomi - door_struct. Bajarilgan fayl ombor ildizida build papkasida joylashsin va nomi  Quest_1 bo‘lsin. Qaror kod uslub normasi va xotira sarfi uchun tekshiriladi, ko'rsatmalar ham `materials` papkasida ==***
 
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas.
-    Lingvistik moduli ishdan chiqdi.
-
-Davom ettiramiz...
-
-***== Quest 2 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strcmp funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *fayliga s21_strcmp funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda s21_strlen_test funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strcmp funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strcmp_tests. Bajarilgan fayl ildizda build papkasida Quest_2 nomi bilan saqlansin. ==***
-
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h stdlib.h, stdio.h
-
-***LOADING...***
-
-
-## Quest 3. Strcpy.
-
-\> *Ikkinchisi tayyor.*
-
-\> *Qayta ishga tushirish*
-
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    1111111111111111111111111111111111111111111111111111111111111111
-    
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas. 
-    Lingvistik moduli ishdan chiqdi.
-
-***== Quest 3 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strcpy funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *fayliga s21_strcpy_test funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda  s21_strcpy funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strcpy funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strcpy_tests. Bajarilgan fayl ildizda build papkasida Quest_3 nomi bilan saqlansin. ==***
-
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
+0, 0<br/>
+1, 0<br/>
+2, 0<br/>
+3, 0<br/>
+4, 0<br/>
+5, 0<br/>
+6, 0<br/>
+7, 0<br/>
+8, 0<br/>
+9, 0<br/>
+10, 0<br/>
+11, 0<br/>
+12, 0<br/>
+13, 0<br/>
+14, 0<br/>
 
 ***LOADING...***
 
 
-## Quest 4. Strcat.
+## Quest 2. Linked List.
 
-\> *Modulni tekshirish*
+Xullas, eshiklar initsializatsiyalanyapti. Lekin qanday chiqsa bo‘ladi? Qaysi eshik uchun ochiq statusini yozish kerak? Agar hamma eshiklar uchun bunday qilinsa, qaydlarga ko‘ra, bu fojia keltirishi mumkin.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111111111111111111111111111111111111
-    
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas. Lingvistik moduli ishdan chiqdi.
+\> *Qog‘ozchani ag‘darish*
 
-***== Quest 4 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strcat funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *fayliga s21_strcat_test funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda   s21_strcat funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strcat funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strcat_tests. Bajarilgan fayl ildizda build papkasida Quest_4 nomi bilan saqlansin. ==***
+Mana davomi.
 
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
+>Kerakli eshik har kuni o‘zgartiriladi. \
+>Bu eshik raqami xonaning ichki modullari bilan polinom funksiyasi orqali hisoblanadi.Modulni amalga oshirishning manba kodi mavjud emas. \
+>Injiniring revers orqali bu modul massivlar bilan ishlay olmasligi aniqlandi. Ish jarayonida modul dinamik yoqiladigan kutubxonani birbog‘lanishli ro‘yxatning amalga oshishi bilan ishlatdi. Bu kutubxona modul ishlashi uchun juda muhim hisoblanadi, lekin kutubxona bilan binar fayl buzilgan edi.
 
-***LOADING...***
+В одном из листов что-то говорилось про односвязный список. Стоит узнать побольше про этот список и заодно разобраться с выделением памяти под него.
+
+***== Quest 2 qabul qilindi. src/list.c dasturi yaratilsin, ichida eshiklarning birbog‘lanishli ro‘yxati bo‘yicha funksiyalar mavjud (`struct node* init(struct door* door` - o‘tkazilgan baza asosida birbog‘lanishli ro‘yxat strukturasining initsializatsiyasi `struct door`, `struct node* add_door(struct node* elem, struct door* door)` -  o‘tkazilgan bog‘lamadan keyin birbog‘lanishli ro‘yxatga `struct door` yangi elementini `elem`, `struct node* find_door(int door_id, struct node* root` ga qo‘shish - ro‘yxatda id bo‘yicha eshik izlash, `struct node* remove_door(struct node* elem, struct node* root)` - ro‘yxat elementini o‘chirish, `void destroy(struct node* root)` - ro‘yxat egallagan xotirani bo‘shatish). Bu funksiyalarning eʼlonlarini va birbog‘lanishli ro‘yxat strukturasi src/list.h ga chiqarilsin. add_door va remove_door funksiyalarining src/listtest.c da ishlashini tekshirish uchun modul testlar yozilsin. Test yaxshi o‘tsa usullar funksiyalari SUCCESS ni va xato bo‘lganda - FAIL niqaytarsin. Testlar Makefile yordamida tuzilsin. Bosqich nomi - list_test. Bajarilgan fayl ombor ildizida build papkasida joylashsin va nomi Quest_2 bo‘lsin. Eʼtibor ber: bu kvest `cppcheck` utilitasi bilan testlanadi  ==***
 
 
-## Quest 5. Strchr.
-
-\> *Yana modulni tekshirish*
-
-    1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
-    11111
-
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas. Lingvistik moduli ishdan chiqdi.
-
-***== Quest 5 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strchr funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *fayliga s21_strchr_test funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda   s21_strchr funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strchr funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strchr_tests. Bajarilgan fayl ildizda build papkasida Quest_5 nomi bilan saqlansin. ==***
-
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
 
 ***LOADING...***
 
 
-## Quest 6. Strstr.
+## Quest 3. Stack for key. 
 
-\> *Tekshiramiz...*
+Xo‘p, bu eshikning raqamini izlash moduli ishlashi uchun kerakli kutubxona yozilgan. Ekranda algoritm hisoblarining faollik shkalasi tezda to‘lishini ko‘ryapsan..
+Bir necha soniyadan keyin ekranda senga kerakli eshik raqami chiqdi. Vazifa yechilganidan o‘zingni yaxshi his qilib eshik yoniga ketding.
 
-    1111111111111111111111111111111111111111111111111111111111111111111111111111
-    
-    Favqulodda xabar: string.h kutubxonaning standart chaqiruvlari mavjud emas. Lingvistik moduli ishdan chiqdi.
-    
-Bu modul nechta chaqirishdan foydalanadi?
-    
-***== Quest 6 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strstr funksiyasining ta’rifini qo’shish. src/s21_string_test.c* *fayliga s21_strchr_test funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda   s21_strchr funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin. s21_strstr funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strstr_tests. Bajarilgan fayl ildizda build papkasida Quest_6 nomi bilan saqlansin. ==***
+\> *Eshik tutqichini tortish*
 
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
+Yopiq... \
+Lekin eshikda kichik ekrancha ochilganini ko‘rding. Ekranda katta harflar bilan yozilgan:
 
-***LOADING...***
+> NO DYNAMIC INT STACK AND/OR STACK OPERATIONS
 
+Kompyuter yoniga qaytding va bu nima degani deb o‘ylayapsan. Afsuski, yordam beruvchi qog‘ozchalar hech qayerda yo‘q... \
+Xotirangni ishga solib, stek - maʼlumotlarning dinamik Strukturalarining bitta turi ekanini eslading, u odatda ro‘yxat ko‘rinishda bo‘ladi. Eshikni ochish uchun butun sonlardan iborat bo‘lgan dinamik stek yozish kerak, shekelli. Stek uchun uning standart interfeysini amalga oshirish kerak: maʼlumotlarni stekka itarib kiritish (push) va u yerdan itarib chiqarish (pop) harakati. Hamma amallarni src/stack.c da, funksiyalar va Strukturalar eʼlonlarini esa src/stack.h da saqlashni unutma. Shuningdek, stek va funksiyalarining ishlashini tekshirish uchun modul matnlari src/stack_test.c ga yozilsin. Stek noto‘g‘ri ishlasa, nima bo‘lishini kim bilsin...
 
-## Quest 7. Strtok.
+***== Quest 3 qabul qilindi. src/stack.c da dinamik stek bilan (init, push, pop, destroy) ishlash bo‘yicha funksiyalarning amalga oshishi joylashgan dasturni yaratish. Funksiyalarining eʼlonlarini va butun sonlar saqlanadigan dinamik stek  strukturalari src/stack.h ga chiqarilsin. push va pop steĸ funksiyalarining src/stack_test.c da ishlashini tekshirish uchun modul testlar yozilsin. Test yaxshi o‘tilsa usullar funksiyalari SUCCESS ni va xato bo‘lganda - FAIL ni qaytarsin. Testlar Makefile yordamida tuzilsin. Bosqich nomi - stack_test. Bajarilgan fayl ombor ildizida build papkasida joylashsin va nomi  Quest_3 bo‘lsin. *Eʼtibor ber: bu kvest `cppcheck` utilitasi bilan testlanadi ==***
 
-\> *Yana*
-
-    11111111111111111111111111111111
-    111111111
-    111
-    
-    Yuklash...
-    Yuklash... Yuklash...
-    Tayyor.
-
-    Modul maʼlumotlari muvaffaqiyatli yuklandi, modul ishga tushishga tayyor.
-
-Nihoyat!
-
-\> *Modulni ishga tushirishni tasdiqlash*
-
-    Modul qo‘llanmasini ishga tushirish...
-    ОК!
-    
-    Modul qo‘llanmasi, Sizga qanday yordam bera olaman?
-
-\> *Kiritish «Davomiga o’tishim kerak»*
-
-    Savolni ajratish - bo’lmadi
-
-    Favqulodda xabar: string.h kutubxonaning keng chaqiruvlari mavjud emas -  strtok funksiyasi topilmadi.
-    
-Nima bo’lyapti o’zi... Bu funksiyani ham kutubxonaga qo’shish kerak, shekkeli.
-
-***== Quest 7 qabul qilindi. src/s21_string.h va src/s21_string.c fayllariga e’lon va s21_strtok funksiyasining ta’rifini qo’shish. src/s21_string_test.c fayliga s21_strtok_test funksiyasini qo‘shish, (3 dan) test maʼlumotlarini yozganda s21_strtok funksiyasini tekshirish uchun: normal qiymatlari, normal bo‘lmagan qiymatlar, chet qiymatlari va hokazo. Har bir test bo‘yicha stdout ga kirish, chiqish va test natijasi (SUCCESS/FAIL) chiqariladi. main ga bu funksiyani ishga tushirish kiritilsin.s21_strtok funksiyasi tuzilganda faqat til vositalari ishlatilsin, string.h va boshqa kutubxonalarni qo‘llash man etiladi. Dastur Makefile yordamida yig’ilsin. Bosqich nomi - strtok_tests. Bajarilgan fayl ildizda build papkasida Quest_7 nomi bilan saqlansin. ==***
-
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
-
-***LOADING...***
-
-
-## Bonus Quest 8*. Width.
-
-\> *Modulni qayta ishga tushirish*
-
-    Modul qo‘llanmasini ishga tushirish...
-    ОК!
-
-    Modul qo‘llanmasi, Sizga qanday yordam bera olaman?
-    
-\> Kiritish «Davomiga o’tishim kerak»*
-
-    Davomiga o’tish - o’tdi
-    Ma’lumotlar bazasi bo’yicha ma’lumot izlash... ... ...
-
-    3-2 xonalar uchun kalit bo’yicha ma’lumot:
-    3-2 xona eshigini ochish uchun matnlarni qayta ishlash bo‘yicha ishlanayotgan dastur to‘plamiga hissa qo‘shish kerak. Mavjud bo’lgan tiketlarni skanerlash......
-    
-    ..............................................................
-    ..............................................................
-    ..............................................................
-    Tiket topildi. Matn protsessorining to‘liq funksionali bilan src/text_processor.c dasturi tuzilsin. 
-    Ilhom uchun manbalar: MS Word, LibreOffice, OpenOffice.
-
-\> *Kiritish «Hm. Oshib ketdi shekelli».*
-
-    Javob tahlili... Javob tahlil qilindi.
-    Javob xususiyatlari: kinoya, og’riq, tushkunlik, ishonchsizlik, qo’rquv, bosh tortish.
-    Yechim izlash...
-    №1 yechim: to‘liq vazifani emas, uning bir qismini amalga oshirish.
-    src/text_processor.c dasturi tuzilsin, u faqat -w (kenglik bo‘yicha formatlash) kaliti bilan bitta kiritish rejimida ishlaydi, stdin orqali u 100 belgigacha bo‘lgan raqam va matnni qabul qiladi.
-    Natija sifatida u kenglik bo‘yicha formatlashgan kiruvchi matnni tuzishi, keyin uni chiqarishi kerak.
-    Matn satrining kengligi belgilarda birinchi raqam bilan boshlanadi.
-    Xonaning o‘chirilgan ombori yangilangandan keyin, eshik ochiladi.
-    №2 yechim: chiqish.
-
-***== Quest 8 qabul qilindi. src/text_processor.c dasturini tuzish, u buyruq satrining -w kaliti bilan ishga tushirilganda stdin ga kirish sifatida raqamni (satr kengligini) va 100 belgili matnni qabul qiladi, u satr yangi qatorga o‘tish belgisi bilan tugaydi. Boshqa har qanday kalitlar bo‘lganda dastur “n/a” ni chiqarishi kerak. –w kaliti bilan ishga tushirilganda, dastur kiruvchi matnni kenglik bo’yicha formatlaydi va stdout ga chiqaradi, u matn protsesorining harakatiga taklid qiladi. Matn bir nechta qatorga bo‘linishi kerak, uning har biri aniq belgilar miqdoridan iborat. Satrlar probel bilan boshlanmasin va yakunlanmasin, oxirgi qator yangi qatorga o‘tish belgisi bilan tugamasin. So‘z hech bir qatorga to‘liq sig‘masagina, yangi satrga o‘tishi uchun ‘-‘ belgisi bilan ajratilsin. Boshqa barcha vaziyatlarda butun qolsin. So‘zlar qatorda bir tekislikda joylashtirilsin, orasidagi masofa bo‘shliqlar bilan to‘ldirilsin. string.h ni ishlatish man etiladi. Bosqich nomi - text_processor. Bajarilgan fayl ildizda build papkasida Quest_8 nomi bilan saqlansin. ==***
-
-| Buyruq satri parametlari | Kiruvchi maʼlumotlar | Chiquvchi maʼlumotlar |
-| ------ | ------ | ------ |
-| -w | 10<br/>hello how are you | hello how<br/>are you |
-| -w | 5<br/>ab abcd ab abcd ab abcdefgh | ab<br/>abcd<br/>ab<br/>abcd<br/>ab a-<br/>bcde-<br/>fgh |
-
-> Faqat quyidagi standart kutubxonalardan foydalanish mumkin: stdlib.h, stdio.h
+> 
+> ***Diqqat! Bu topshiriq avtotestlashni ko‘zlamaydi***
+> 
 
 ***LOADING...***
 
 
 # Chapter IV
 
-\> *Kiritish «Chiqsam bo’ladimi?»*
+\> *Oxirgi topshiriqni omborga kiritish*
 
-    Chiqish uchun barcha shartlar: bajarildi. 
-    Oxirgisi qoldi.
-    Keling gaplashamiz.
+Menimcha, hamma narsa qilindi.
 
-\> *Kiritish «Balki, boshqa safar?..»*
+\> *Kerakli eshik yoniga borish*
 
-    Javobingiz 91% aniqlik bilan prediktiv algoritm tomonidan bashorat qilindi. 
-    Mazmunli suhbat va prediktiv lingvistik tahlil tekshiruvidagi yordam uchun rahmat.
-    Omon bo’ling.
-    Eshik ochilishi...
-    
-Tiq etdi va eshik huddi prujinada bo’lganday keng ochildi. Oq yol!
+Kichik ekran bo‘sh. Stek eshik ishlashi uchun to‘g‘ri keldi, shekelli.
+
+\> *Eshikni ochish*
+
+Eshik ochildi, va keyingi xonaga qadam bosding.
 
 ***LOADING...***
 

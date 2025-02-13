@@ -16,7 +16,6 @@ check your program and its source code for the following points:
   Required version of clang-format: \
   **Mac** 18.1.6 \
   **Linux** 18.1.3
-  
 
 * **Test for correct operation with memory.** When writing C programs, it is very important to watch for memory leaks. To do this the _valgrind_ utility is quite often used in Unix-like operating systems. However OS X has some troubles with valgrind support, so it is possible to use _leaks_ utility instead. Go into we will not discuss the mechanism of their operation now - if you are interested, you can read about it on Google.
 
@@ -53,3 +52,19 @@ check your program and its source code for the following points:
    It is strongly recommended not to use _valgrind_ utility in OS X, use [_leaks_](#leaks-macos) utility  instead.
 
   Also, you can read the [information on installing the software and Valgrind](https://21-school.ru/install_soft_to_school_IMacs).
+  
+* **Static code analysis.** Sometimes (or not quite sometimes) it happens that
+  a correctly compiled C program runs completely incorrectly or terminates
+  with an error trying to access the wrong memory area. To prevent this from happening
+  errors at the stage of writing the program, use special utilities that analyze
+  check your source code for potential errors. Our autotest system uses
+  ```cppcheck``` for this.
+
+  You can test your source code: \
+  ```cppcheck --enable=all --suppress=missingIncludeSystem src/soursefile_name.c``` \
+  You can also check all the source code files in the directory at once: \
+  ```cppcheck --enable=all --suppress=missingIncludeSystem src/```
+
+  Required version of cppcheck: \
+  **Mac** 2.13 \
+  **Linux** 2.13

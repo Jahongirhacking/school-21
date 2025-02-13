@@ -13,7 +13,6 @@ Dasturning to‘g‘ri ma‘lumot qaytarishidan tashqari avtotest siz tuzgan das
   clang-format kerakli versiyasi: \
   **Linux** 18.1.3
   
-  
   Google Style: https://google.github.io/styleguide/cppguide.html
   
 
@@ -22,7 +21,7 @@ Dasturning to‘g‘ri ma‘lumot qaytarishidan tashqari avtotest siz tuzgan das
   #### _Valgrind (Ubuntu / Linux Mint / Debian)_
 
   Kompilyatsiga tayyor faylni tekshirish uchun: \
-  ```valgrind --tool=memcheck --leak-check=yes. /main. out``` \
+  ```valgrind --tool=memcheck --leak-check=yes  ./main.out```\
   foydalaning. 
 
   ---
