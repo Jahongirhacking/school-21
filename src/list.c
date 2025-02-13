@@ -7,6 +7,9 @@
 
 struct node* init(const struct door* door) {
     struct node* new_node = (struct node*)malloc(sizeof(struct node));
+    if (new_node == NULL) {
+        return NULL;
+    }
     new_node->data = *door;
     new_node->next = NULL;
     return new_node;

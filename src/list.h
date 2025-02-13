@@ -3,9 +3,6 @@
 
 #include "door_struct.h"
 
-#define SUCCESS 0
-#define FAIL 1
-
 // Node structure for singly linked list
 struct node {
     struct door data;
