@@ -1,51 +1,29 @@
 #include "stack.h"
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-Stack* init(int value) {
-    Stack* stack = (Stack*)malloc(sizeof(Stack));
-    if (stack == NULL) {
-        return NULL;
+void push_op(OperatorStack *s, const char *value) {
+    if (s->top < MAX_STACK - 1) {
+        strcpy(s->tokens[++s->top], value);
     }
-    stack->data = value;
-    stack->next = NULL;
-    return stack;
 }
 
-Stack* push(Stack* stack, int value) {
-    Stack* new_stack = init(value);
-    if (stack == NULL) {
-        return NULL;
+char *pop_op(OperatorStack *s) {
+    if (s->top >= 0) {
+        return s->tokens[s->top--];
     }
-    new_stack->next = stack;
-    return new_stack;
+    return "";
 }
 
-Stack* pop(Stack* stack) {
-    if (stack == NULL) {
-        return NULL;
+void push_val(ValueStack *s, double value) {
+    if (s->top < MAX_STACK - 1) {
+        s->values[++s->top] = value;
     }
-    Stack* temp = stack;
-    stack = stack->next;
-    free(temp);
-    return stack;
 }
 
-void destroy(Stack* stack) {
-    if (stack == NULL) {
-        return;
+double pop_val(ValueStack *s) {
+    if (s->top >= 0) {
+        return s->values[s->top--];
     }
-    destroy(stack->next);
-    free(stack);
-}
-
-void print_stack(Stack* stack) {
-    if (stack == NULL) {
-        return;
-    }
-    while (stack != NULL) {
-        printf(stack->next ? "%d " : "%d", stack->data);
-        stack = stack->next;
-    }
+    return 0.0;
 }

@@ -1,18 +1,24 @@
 #ifndef STACK_H
 #define STACK_H
 
-// Stack Node Structure
-typedef struct stack {
-    int data;
-    struct stack* next;
-} Stack;
+#include "parse.h"
 
+#define MAX_STACK 100
 
-// Function Prototypes
-Stack* init(int value);
-Stack* push(Stack* stack, int value);
-Stack* pop(Stack* stack);
-void destroy(Stack* stack);
-void print_stack(Stack* stack);
+typedef struct {
+    char tokens[MAX_TOKENS][MAX_TOKEN_LENGTH];
+    int top;
+} OperatorStack;
 
-#endif //STACK_H
+typedef struct {
+    double values[MAX_STACK];
+    int top;
+} ValueStack;
+
+void push_op(OperatorStack *s, const char *value);
+char *pop_op(OperatorStack *s);
+
+void push_val(ValueStack *s, double value);
+double pop_val(ValueStack *s);
+
+#endif

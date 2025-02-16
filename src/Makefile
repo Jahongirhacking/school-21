@@ -1,42 +1,24 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -std=c11
 BUILD_DIR = ../build
-QUEST1_OUTPUT = $(BUILD_DIR)/Quest_1
-QUEST2_OUTPUT = $(BUILD_DIR)/Quest_2
-QUEST3_OUTPUT = $(BUILD_DIR)/Quest_3
+OUTPUT = $(BUILD_DIR)/graph
+SOURCE_FILES = main.c parse.c stack.c calculate.c graph.c
+HEADER_FILES = parse.h stack.h calculate.h graph.h
 
-door_struct: $(QUEST1_OUTPUT)
-	$(QUEST1_OUTPUT)
+all: $(OUTPUT)
+	$(OUTPUT)
 
-$(QUEST1_OUTPUT): dmanager_module.c
-	$(CC) dmanager_module.c -o $(QUEST1_OUTPUT)
-
-list_test: $(QUEST2_OUTPUT)
-	$(QUEST2_OUTPUT)
-
-$(QUEST2_OUTPUT): list_test.c list.c
-	$(CC) list_test.c list.c -o $(QUEST2_OUTPUT)
-
-stack_test: $(QUEST3_OUTPUT)
-	$(QUEST3_OUTPUT)
-
-$(QUEST3_OUTPUT): stack_test.c stack.c
-	$(CC) stack_test.c stack.c -o $(QUEST3_OUTPUT)
+$(OUTPUT): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) $(SOURCE_FILES) -lm -o $(OUTPUT)
 
 clean:
-	rm -f $(QUEST1_OUTPUT) $(QUEST2_OUTPUT)
+	rm -f $(OUTPUT)
 
 format:
-	clang-format -i dmanager_module.c
-	clang-format -i list_test.c
-	clang-format -i list.c
-	clang-format -i stack_test.c
-	clang-format -i stack.c
+	clang-format -i $(SOURCE_FILES) $(HEADER_FILES)
 
 memory_check: list_test door_struct
-	valgrind --tool=memcheck --leak-check=yes $(QUEST1_OUTPUT)
-	valgrind --tool=memcheck --leak-check=yes $(QUEST2_OUTPUT)
-	valgrind --tool=memcheck --leak-check=yes $(QUEST3_OUTPUT)
+	valgrind --tool=memcheck --leak-check=yes $(OUTPUT)
 
 cpp_check:
 	cppcheck --enable=all --inconclusive --quiet --std=c11 --suppress=missingIncludeSystem ./
